@@ -1,6 +1,6 @@
 {
   "name": "regex-mobile-viewport",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Regex for checking HTML has a mobile meta-viewport",
   "homepage": "http://addyosmani.com",
   "author": {
