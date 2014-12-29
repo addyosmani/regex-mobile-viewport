@@ -22,5 +22,14 @@ describe('regex-mobile-viewport node module', function () {
 		assert.equal(auditMobileViewport().test('<meta name="viewport">'), false);
 		done();
 	});
+
+	it('should fail if the meta portion of the tag is excluded', function (done) {
+		assert.equal(auditMobileViewport().test('<name="viewport" content="width=device-width, initial-scale=1">'), false);
+		assert.equal(auditMobileViewport().test('<name="viewport" content="width = device-width, initial-scale=1">'), false);
+		assert.equal(auditMobileViewport().test('<name="viewport" content="width=device-width, initial-scale = 1">'), false);
+		assert.equal(auditMobileViewport().test('<name="viewport" content="width=device-width, initial-scale=1.0">'), false);
+		done();
+	});
+
 });
 

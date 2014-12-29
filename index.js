@@ -1,4 +1,4 @@
 'use strict';
 module.exports = function () {
-  return /(\W|^)width(\s?)=(\s?)device-width(\W|$)(\W|$)initial-scale(\s?)=(\s?)1(\W|$)/g;
+  return /<meta.*?name=("|\')viewport("|\').*?content.*?=("|\')*width.*?=.*?device-width.*?initial-scale.*?=*.?1*.?("|\')[^>]*>/g;
 };
