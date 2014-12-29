@@ -8,6 +8,7 @@ describe('regex-mobile-viewport node module', function () {
 		assert.equal(auditMobileViewport().test('<meta name="viewport" content="width=device-width, initial-scale=1">'), true);
 		assert.equal(auditMobileViewport().test('<meta name="viewport" content="width = device-width, initial-scale=1">'), true);
 		assert.equal(auditMobileViewport().test('<meta name="viewport" content="width=device-width, initial-scale = 1">'), true);
+		assert.equal(auditMobileViewport().test('<meta name="viewport" content="width=device-width, initial-scale=1.0">'), true);
 		done();
 	});
 
